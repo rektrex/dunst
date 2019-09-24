@@ -69,6 +69,13 @@ static void x_handle_click(XEvent ev);
 
 static void x_win_move(struct window_x11 *win, int x, int y, int width, int height)
 {
+
+        
+        if (settings.centre) {
+                x = get_active_screen()->w / 2;
+                x -= win->dim.w / 2;
+        }
+
         /* move and resize */
         if (x != win->dim.x || y != win->dim.y) {
                 XMoveWindow(xctx.dpy, win->xwin, x, y);

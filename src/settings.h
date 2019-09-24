@@ -88,6 +88,7 @@ struct settings {
         enum mouse_action mouse_left_click;
         enum mouse_action mouse_middle_click;
         enum mouse_action mouse_right_click;
+        bool centre;
 };
 
 extern struct settings settings;

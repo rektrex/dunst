@@ -677,6 +677,12 @@ void load_settings(char *cmdline_config_path)
                 "Always run rule-defined scripts, even if the notification is suppressed with format = \"\"."
         );
 
+        settings.centre = option_get_bool(
+                "global",
+                "centre", "-centre", true,
+                "Centre the window horizontally"
+                );
+
         /* push hardcoded default rules into rules list */
         for (int i = 0; i < G_N_ELEMENTS(default_rules); i++) {
                 rules = g_slist_insert(rules, &(default_rules[i]), -1);

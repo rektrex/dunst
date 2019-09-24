@@ -60,6 +60,7 @@ struct settings defaults = {
 /* monitor to display notifications on */
 .monitor = 0,
 
+
 /* path to dmenu */
 .dmenu = "/usr/bin/dmenu",
 
@@ -107,6 +108,7 @@ struct settings defaults = {
 
 .mouse_right_click = MOUSE_CLOSE_ALL,
 
+.centre = true,
 };
 
 struct rule default_rules[] = {
